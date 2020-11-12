@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="129dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <EditText
+            android:id="@+id/firstNum"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/secondNum"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:inputType="numberSigned"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/equal"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="="
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="389dp"
+            android:layout_height="236dp"
+            android:layout_weight="1"
+            tools:columnCount="3"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="413dp">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="30sp"
+                app:layout_gravity="fill_vertical"
+                app:layout_rowSpan="3" />
+
+            <Button
+                android:id="@+id/buttonSubstract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="30sp"
+                app:layout_columnSpan="2"
+                app:layout_gravity="fill_horizontal" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="30sp"
+                app:layout_columnSpan="2"
+                app:layout_gravity="fill_horizontal" />
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                app:layout_columnSpan="2"
+                app:layout_gravity="fill_horizontal"
+                tools:textSize="30sp" />
+
+            <Button
+                android:id="@+id/buttonClean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textSize="30sp"
+                app:layout_columnSpan="2"
+                app:layout_gravity="fill_horizontal" />
+
+            <Button
+                android:id="@+id/buttonPow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="^"
+                tools:textSize="30sp" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
